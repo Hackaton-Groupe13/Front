@@ -3,9 +3,7 @@ body {
     padding: 0;
     min-height: 100vh;
     background: linear-gradient(to bottom, #BBD0FF, #FFFFFF);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     background-size: 100% 150%; /* Adjust the second value (e.g., 150%) to control the gradient height */
     transition: background-size 0.5s; /* Optional smooth transition */
     font-family: "Dela Gothic One", sans-serif;
@@ -14,14 +12,21 @@ body {
 .container {
     text-align: center;
 }
+.contenair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .tab {
     background-color: #A6C2FF;
-    padding: 10px 20px; /* Ajustez la taille du padding selon vos besoins */
+    padding: 15px 20px; /* Ajustez la taille du padding selon vos besoins */
     border-radius: 10px; /* Pour arrondir les coins */
     font-size: 1.5em; /* Ajustez la taille de la police selon vos besoins */
     color: #fff; /* Couleur du texte */
     margin-top : 0px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
 .title {
@@ -31,24 +36,28 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    margin-top:10%;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 2%;
-    background-color: #FDE8FF;
-    padding: 10px 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .menu-toggle {
+    margin: 25px;
+    background-color: #FDE8FF;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
 }
 .a {
     background-color:#B8C0FF;
@@ -74,41 +83,52 @@ body {
     border-radius: 20px;
 }
 .bar1 {
-    width: 25px;
-    height: 3px;
+    width: 55px;
+    height: 7px;
     background-color: #fff;
     margin: 3px 0;
     transition: transform 0.3s ease;
+    border-radius : 25px;
 }
 
 .bar2 {
-    width: 25px;
-    height: 3px;
+    width: 55px;
+    height: 7px;
     background-color: #FFD1FD;
     margin: 3px 0;
     transition: transform 0.3s ease;
+    border-radius : 25px;
 }
 
 .bar3 {
-    width: 25px;
-    height: 3px;
+    width: 55px;
+    height: 7px;
     background-color: #D787FD;
     margin: 3px 0;
     transition: transform 0.3s ease;
+    border-radius : 25px;
 }
 
 .menu {
     text-align: center;
     display: none;
     position: absolute;
-    top: 40px;
+    top: 0px;
     left: 0px;
     background-color: #FDE8FF;
     padding: 10px;
     border-radius: 5px;
     width: 266px;
-    height: 552px;
+    height: 5000px;
     box-shadow : 4px 0px 10px 0px rgba(0,0,0,0.25);
+}
+
+.close-button {
+    position: right;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    color: #D787FD;
 }
 
 .menu ul {
