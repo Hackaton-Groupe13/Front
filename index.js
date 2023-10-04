@@ -7,6 +7,7 @@ let son = ""
 let url = "http://149.202.40.232:8080/api/info"
 let obj = {}
 
+
 fetch(url)
     .then(response => response.json())
     .then(json => {
@@ -31,6 +32,7 @@ function fetchAndPlay(urlSon) {
         .then(blob => {
             const audioPlayer = document.getElementById('audioPlayer');
             audioPlayer.src = URL.createObjectURL(blob);
+            audioPlayer.play
         })
         .catch(err => {
             console.error("Erreur lors de la récupération du son:", err);
@@ -65,8 +67,6 @@ function readInputValue() {
 
 
 
-console.clear();
-
 class musicPlayer {
     constructor() {
         this.play = this.play.bind(this);
@@ -93,10 +93,18 @@ class musicPlayer {
             console.log("play")
             btn.classList.remove('play')
             btn.classList.add('pause')
+
+            let audioPlayer = document.getElementById('audioPlayer')
+            audioPlayer.play()
+
+
         } else {
             console.log("pause")
             btn.classList.remove("pause")
             btn.classList.add("play")
+
+            let audioPlayer = document.getElementById('audioPlayer')
+            audioPlayer.pause()
         }
 
     }

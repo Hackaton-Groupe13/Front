@@ -33,7 +33,7 @@ body {
   padding: 15px 0 0;
   margin-top: 10px;
   width: 30%;
-  margin-bottom: 10%;
+  margin-bottom: 50px;
 }
 
 /* .form__field */
@@ -267,4 +267,7 @@ body {
 }
 .pause {
   background-image: url(bouton-pause.png);
+}
+audio {
+  display: none;
 }
