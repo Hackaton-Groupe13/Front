@@ -6,41 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Votre site web</title>
+    <title>Blindtest</title>
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <h1 class="title">Soundle</h1>
-            <div class="scrollable">
-                <p>Scroll to play</p>
+    <div class="form__group field">
+        <input id="input" type="input" class="form__field" placeholder="Musique" name="music" id='music' required />
+        <label for="music" class="form__label">Musique</label>
+    </div>
+
+    <!-- <div class="audioplayer">
+        <audio id="audioPlayer" controls></audio>
+    </div> -->
+
+
+    <div class="player">
+        <div id="info" class="info">
+            <span class="artist">Inconnu</span>
+            <span class="name">Inconnu</span>
+            <div class="progress-bar">
+                <div class="bar"></div>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="container reveal fade-bottom">
-            <h2>Select a game !</h2>
-            <div class="text-container">
-                <div class="paquet">
-                    <div class="text-box jeu1"> <!-- Utilisez un espace pour séparer les classes -->
-                        <a href="#">N'oubliez pas les paroles</a>
-                    </div>
-                    <div class="text-box jeu2"> <!-- Utilisez un espace pour séparer les classes -->
-                        <a href="#">Qui suis-je ?</a>
-                    </div>
-                </div>
-                <div class="paquet">
-                    <div class="text-box jeu3"> <!-- Utilisez un espace pour séparer les classes -->
-                        <a href="#">BlindTest</a>
-                    </div>
-                    <div class="text-box jeu4"> <!-- Utilisez un espace pour séparer les classes -->
-                        <a href="#">Trouve l'album/l'artiste</a>
-                    </div>
-                </div>
+        <div id="control-panel" class="control-panel">
+            <div class="album-art"></div>
+            <div class="controls">
+                <div class="prev"></div>
+                <div id="play" class="play"></div>
+                <div class="next"></div>
             </div>
         </div>
-    </section>
+    </div>
+
+
+
 </body>
 <script src="index.js"></script>
 
