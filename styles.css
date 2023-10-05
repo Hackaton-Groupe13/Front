@@ -2,12 +2,31 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #c977fc, #ffffff);
+  background-color: rgb(27, 27, 27);
   font-family: "Dela Gothic One", sans-serif;
-  width: 100%;
-  height: 100%;
   user-select: none;
+  overflow: hidden;
 }
+
+header {
+  height: 10vh;
+  background-color: rgb(47, 47, 47);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 10vh;
+  margin-left: 2vw;
+}
+
+.logoText {
+  color: white;
+  font-size: 3vw;
+  margin-right: 2vw;
+}
+
 .container {
   margin-top: 10%;
   display: flex;
@@ -91,13 +110,14 @@ html {
   position: relative;
 }
 .player .info {
+  display: none;
   position: absolute;
   height: 60px;
   top: 0;
   opacity: 0;
   left: 10px;
   right: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #3c3c3c;
   padding: 5px 15px 5px 110px;
   border-radius: 15px;
   transition: all 0.5s ease;
@@ -120,23 +140,6 @@ html {
   margin-bottom: 8px;
 }
 
-.player .info .progress-bar {
-  background-color: #ddd;
-  height: 2px;
-  width: 100%;
-  position: relative;
-}
-
-.player .info .progress-bar .bar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: red;
-  width: 10%;
-  transition: all 0.2s ease;
-}
-
 .player .info.active {
   top: -63px;
   opacity: 1;
@@ -146,12 +149,12 @@ html {
 /* Styles pour .control-panel */
 .player .control-panel {
   position: relative;
-  background-color: #fff;
+  background-color: #242424;
   border-radius: 15px;
   width: 400px;
   height: 80px;
   z-index: 5;
-  box-shadow: 0px 20px 20px 5px rgba(132, 132, 132, 0.3);
+  box-shadow: 0px 20px 20px 5px #161616;
 }
 
 .player .control-panel .album-art {
@@ -161,7 +164,7 @@ html {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 20px 5px #242424;
   transform: scale(1);
   transition: all 0.5s ease;
 }
@@ -173,7 +176,7 @@ html {
   left: 50%;
   width: 15px;
   height: 15px;
-  background-color: #fff;
+  background-color: #242424;
   border-radius: 50%;
   z-index: 5;
   transform: translate(-50%, -50%);
@@ -233,7 +236,7 @@ html {
   background-repeat: no-repeat;
   background-size: 20px;
   margin: 5px 0;
-  background-color: #fff;
+  background-color: #242424;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
 }
@@ -258,7 +261,7 @@ audio {
   border-radius: 25px;
   width: 20%;
   height: 15%;
-  transition: transform 0.3s ease; /* Transition pour le déplacement */
+  transition: transform 0.3s ease;
 }
 
 .regles1,
@@ -286,14 +289,16 @@ audio {
   margin: 10px;
 }
 
-header {
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
-}
 .title {
   margin-top: 10px;
   background-color: #9d00ff;
   padding: 10px 100px 10px 100px;
   border-radius: 25px;
+}
+
+
+.regleText {
+  color: var(--gray);
+  margin-top: 5vh;
+  text-align: center;
 }

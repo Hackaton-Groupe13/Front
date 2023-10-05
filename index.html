@@ -9,36 +9,12 @@
     <title>Blindtest</title>
 </head>
 <header>
-    <div class="title">Blindtest</div>
+    <img class="logo"  href="/" src="./soundle.PNG" >
+    <a class="logoText">Soundle</a>
 </header>
 
 <body>
     <div class="container">
-        <div class="form__group field">
-            <input id="input" type="input" class="form__field" placeholder="Musique" name="music" id='music' required />
-            <label for="music" class="form__label">Musique</label>
-        </div>
-
-
-
-        <div class="regles" onmouseover="moveElements(true)" onmouseout="moveElements(false)">
-            Réponse attendue sous format :<br>
-            Artiste<br>
-            Titre<br>
-            Artiste - Titre
-        </div>
-        <div class="regles1"></div>
-        <div class="regles2"></div>
-
-
-
-
-        <div id="messageDiv"></div>
-
-        <div class="audioplayer">
-            <audio id="audioPlayer" controls></audio>
-        </div>
-
 
         <div class="player">
             <div id="info" class="info">
@@ -56,6 +32,22 @@
                     <div class="next"></div>
                 </div>
             </div>
+        </div>
+
+        <div class="form__group field">
+            <input id="input" type="input" class="form__field" placeholder="Musique" name="music" id='music' required />
+            <label for="music" class="form__label">Musique</label>
+            <a class="regleText">Réponse attendue sous format :<br>
+                Artiste<br>
+                Titre<br>
+                Artiste - Titre</a>
+        </div>
+
+
+        <div id="messageDiv"></div>
+
+        <div class="audioplayer">
+            <audio id="audioPlayer" controls></audio>
         </div>
     </div>
 
