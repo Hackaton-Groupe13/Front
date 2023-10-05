@@ -40,30 +40,86 @@ function fetchAndPlay(urlSon) {
 }
 
 
-document.getElementById("input").addEventListener("change", readInputValue)
+// document.getElementById("input").addEventListener("change", readInputValue)
+
+// function readInputValue() {
+//     let input = document.getElementById("input").value
+
+//     xdd = obj.blindTest.reponse
+
+//     let [artist, song] = xdd.split(" - ");
+
+//     input = input.toLowerCase()
+//     artist = artist.toLowerCase()
+//     song = song.toLowerCase()
+//     xdd = xdd.toLowerCase()
+
+//     if (xdd == input) {
+//         console.log("Bonne réponse")
+//     } else if (artist == input) {
+//         console.log("Artiste trouvé")
+//     } else if (song == input) {
+//         console.log("Titre trouvé")
+//     } else {
+//         console.log("Erreur")
+//     }
+// }
+
+
+
+
+
+
+
+// Votre code précédent avec quelques modifications
+
+// Écoutez l'événement "keydown" sur l'élément d'entrée
+document.getElementById("input").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        readInputValue();
+    }
+});
+
+// Votre code précédent avec quelques modifications
+
+// Écoutez l'événement "keydown" sur l'élément d'entrée
+document.getElementById("input").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        readInputValue();
+    }
+});
 
 function readInputValue() {
-    let input = document.getElementById("input").value
-
-    xdd = obj.blindTest.reponse
-
+    let input = document.getElementById("input").value;
+    let xdd = obj.blindTest.reponse;
     let [artist, song] = xdd.split(" - ");
 
-    input = input.toLowerCase()
-    artist = artist.toLowerCase()
-    song = song.toLowerCase()
-    xdd = xdd.toLowerCase()
+    input = input.toLowerCase();
+    artist = artist.toLowerCase();
+    song = song.toLowerCase();
+    xdd = xdd.toLowerCase();
+
+    let messageDiv = document.getElementById("messageDiv");
 
     if (xdd == input) {
-        console.log("Bonne réponse")
+        messageDiv.textContent = "Bonne réponse";
+        // Afficher une pop-up avec un message
+        window.alert("Bonne réponse !");
+        // Rediriger vers la page d'accueil (changez l'URL selon vos besoins)
+        window.location.href = "#";
     } else if (artist == input) {
-        console.log("Artiste trouvé")
+        messageDiv.textContent = "Artiste trouvé";
     } else if (song == input) {
-        console.log("Titre trouvé")
+        messageDiv.textContent = "Titre trouvé";
     } else {
-        console.log("Erreur")
+        messageDiv.textContent = "Erreur";
     }
 }
+
+// Le reste de votre code reste inchangé.
+
+
+
 
 
 
@@ -111,3 +167,16 @@ class musicPlayer {
 }
 
 const newMusicplayer = new musicPlayer();
+
+function moveElements(moveLeft) {
+    if (moveLeft) {
+        // Déplacer les éléments en diagonale vers le coin supérieur gauche
+        document.querySelector('.regles1').style.transform = 'translate(-10px, -10px)';
+        document.querySelector('.regles2').style.transform = 'translate(10px, 10px)';
+    } else {
+        // Réinitialiser la position des éléments (en annulant les translations)
+        document.querySelector('.regles1').style.transform = 'translate(0)';
+        document.querySelector('.regles2').style.transform = 'translate(0)';
+    }
+}
+

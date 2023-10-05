@@ -8,39 +8,56 @@
     <link rel="stylesheet" href="styles.css">
     <title>Blindtest</title>
 </head>
+<header>
+    <div class="title">Blindtest</div>
+</header>
 
 <body>
-    <div class="form__group field">
-        <input id="input" type="input" class="form__field" placeholder="Musique" name="music" id='music' required />
-        <label for="music" class="form__label">Musique</label>
-    </div>
-    <div class="message">
-
-    </div>
-
-    <div class="audioplayer">
-        <audio id="audioPlayer" controls></audio>
-    </div>
+    <div class="container">
+        <div class="form__group field">
+            <input id="input" type="input" class="form__field" placeholder="Musique" name="music" id='music' required />
+            <label for="music" class="form__label">Musique</label>
+        </div>
 
 
-    <div class="player">
-        <div id="info" class="info">
-            <span class="artist">Inconnu</span>
-            <span class="name">Inconnu</span>
-            <div class="progress-bar">
-                <div class="bar"></div>
+
+        <div class="regles" onmouseover="moveElements(true)" onmouseout="moveElements(false)">
+            Réponse attendue sous format :<br>
+            Artiste<br>
+            Titre<br>
+            Artiste - Titre
+        </div>
+        <div class="regles1"></div>
+        <div class="regles2"></div>
+
+
+
+
+        <div id="messageDiv"></div>
+
+        <div class="audioplayer">
+            <audio id="audioPlayer" controls></audio>
+        </div>
+
+
+        <div class="player">
+            <div id="info" class="info">
+                <span class="artist">Inconnu</span>
+                <span class="name">Inconnu</span>
+                <div class="progress-bar">
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div id="control-panel" class="control-panel">
+                <div class="album-art"></div>
+                <div class="controls">
+                    <div class="prev"></div>
+                    <div id="play" class="play"></div>
+                    <div class="next"></div>
+                </div>
             </div>
         </div>
-        <div id="control-panel" class="control-panel">
-            <div class="album-art"></div>
-            <div class="controls">
-                <div class="prev"></div>
-                <div id="play" class="play"></div>
-                <div class="next"></div>
-            </div>
-        </div>
     </div>
-
 
 
 </body>
