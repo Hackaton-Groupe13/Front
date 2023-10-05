@@ -146,5 +146,14 @@ body {
     font-size: 18px;
 }
 
+.green {
+    color : green;
+}
 
+.red {
+    color : red;
+}
 
+.hidden {
+    visibility : hidden;
+}

@@ -32,7 +32,11 @@
         <div class="tab">
             Trouve l'album/artiste
         </div>
-        <h1 class="title">Trouve l'album</h1>
+        <div id="cover-container">
+            <img id="cover" src="">
+        </div>
+        <p id="failWinText" class="title"></p>
+        <input id="answerInput" type="text" placeholder="Trouve l'album" onkeydown="checkEnter(event)">
     </div>
 </div>
     <script src="index.js"></script>
