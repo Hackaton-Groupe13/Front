@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Qui est-ce</title>
+        <!-- <link rel="icon" href="/static/img/logo.png"> -->
+        <link rel="stylesheet" href="../style/qui_est_ce.css">
+    </head>
+    <body>
+        <script src="../js/qui_est_ce.js"></script>
+        <div id="title">
+            <p>Qui suis-je ?</p>
+        </div>
+        <div id="emoji-container">
+            <div class="emoji-container">
+                <p id="emoji0" class="emoji"></p>
+            </div>
+            <div class="emoji-container">
+                <p id="emoji1" class="emoji">❔</p>
+            </div>
+            <div class="emoji-container">
+                <p id="emoji2" class="emoji">❔</p>
+            </div>
+            <div class="emoji-container">
+                <p id="emoji3" class="emoji">❔</p>
+            </div>
+        </div>
+        <div id="second-title">
+            <p>Qui suis-je ?</p>
+        </div>
+        <input id="answerInput" type="text" placeholder="Votre réponse ici" onkeydown="checkEnter(event)">
+    </body>
+</html>

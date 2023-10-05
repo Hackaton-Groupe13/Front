@@ -1,0 +1,14 @@
+body {
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(180deg, #C8B6FF 0.06%, #FFF 124.73%); */
+}
+
+#title {
+    border-radius: 3.125rem;
+    background: #B49BFF;
+}
+
+.hidden {
+    visibility: hidden;
+}
