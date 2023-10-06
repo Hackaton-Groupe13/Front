@@ -1,0 +1,304 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(27, 27, 27);
+  font-family: "Dela Gothic One", sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+
+header {
+  height: 10vh;
+  background-color: rgb(47, 47, 47);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 10vh;
+  margin-left: 2vw;
+}
+
+.logoText {
+  color: white;
+  font-size: 3vw;
+  margin-right: 2vw;
+}
+
+.container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.audioplayer {
+  margin-top: 10%;
+}
+
+:root {
+  --primary: #a6c2ff;
+  --secondary: #a6c2ff;
+  --white: #fff;
+  --gray: #9b9b9b;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  width: 30%;
+}
+
+.form__field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--gray);
+  outline: 0;
+  font-size: 1.3rem;
+  color: var(--white);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, var(--primary), var(--secondary));
+  border-image-slice: 1;
+}
+
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+.player {
+  margin-top: 40px;
+  position: relative;
+}
+.player .info {
+  display: none;
+  position: absolute;
+  height: 60px;
+  top: 0;
+  opacity: 0;
+  left: 10px;
+  right: 10px;
+  background-color: #3c3c3c;
+  padding: 5px 15px 5px 110px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.player .info .artist,
+.player .info .name {
+  display: block;
+}
+
+.player .info .artist {
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.player .info .name {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.player .info.active {
+  top: -63px;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+/* Styles pour .control-panel */
+.player .control-panel {
+  position: relative;
+  background-color: #242424;
+  border-radius: 15px;
+  width: 400px;
+  height: 80px;
+  z-index: 5;
+  box-shadow: 0px 20px 20px 5px #161616;
+}
+
+.player .control-panel .album-art {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px #242424;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.player .control-panel .album-art::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #242424;
+  border-radius: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.player .control-panel .album-art::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-image: url(../assets/blindtest/disque-vinyle.png);
+}
+
+.player .control-panel.active .album-art {
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.player .control-panel.active .album-art::before {
+  animation: rotation 3s infinite linear;
+  -webkit-animation: rotation 3s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.player .control-panel .controls {
+  display: flex;
+  justify-content: flex-end;
+  height: 80px;
+  padding: 0 15px;
+}
+
+.player .control-panel .controls .prev,
+.player .control-panel .controls .play,
+.player .control-panel .controls .next,
+.player .control-panel .controls .pause {
+  width: 55px;
+  height: auto;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin: 5px 0;
+  background-color: #242424;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+}
+.player .control-panel .controls .play {
+  background-image: url(../assets/blindtest/bouton-jouer.png);
+}
+.pause {
+  background-image: url(../assets/blindtest/bouton-pause.png);
+}
+audio {
+  display: none;
+}
+.regles {
+  border: solid 2px;
+  border-color: blueviolet;
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(178, 168, 254);
+  border-radius: 25px;
+  width: 20%;
+  height: 15%;
+  transition: transform 0.3s ease;
+}
+
+.regles1,
+.regles2 {
+  position: fixed;
+  width: 20%;
+  height: 15%;
+  border-radius: 25px;
+  transition: transform 0.3s ease; /* Transition pour le déplacement */
+}
+
+.regles1 {
+  background-color: #c977fc;
+}
+
+.regles2 {
+  background-color: #a6c2ff;
+}
+.regles,
+.regles1,
+.regles2 {
+  margin-bottom: 30px;
+}
+#messageDiv {
+  margin: 10px;
+}
+
+.title {
+  margin-top: 10px;
+  background-color: #9d00ff;
+  padding: 10px 100px 10px 100px;
+  border-radius: 25px;
+}
+
+
+.regleText {
+  color: var(--gray);
+  margin-top: 5vh;
+  text-align: center;
+}

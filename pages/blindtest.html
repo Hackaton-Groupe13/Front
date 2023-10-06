@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/blindtest.css">
+    <title>Blindtest</title>
+</head>
+<header>
+    <img class="logo"  href="../index.html" src="../assets/header/soundle.PNG" >
+    <a class="logoText" href="../index.html">Soundle</a>
+</header>
+
+<body>
+    <div class="container">
+
+        <div class="player">
+            <div id="info" class="info">
+                <span class="artist">Inconnu</span>
+                <span class="name">Inconnu</span>
+                <div class="progress-bar">
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div id="control-panel" class="control-panel">
+                <div class="album-art"></div>
+                <div class="controls">
+                    <div class="prev"></div>
+                    <div id="play" class="play"></div>
+                    <div class="next"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__group field">
+            <input id="input" type="input" class="form__field" placeholder="Musique" name="music" id='music' required />
+            <label for="music" class="form__label">Musique</label>
+            <a class="regleText">Réponse attendue sous format :<br>
+                Artiste<br>
+                Titre<br>
+                Artiste - Titre</a>
+        </div>
+
+
+        <div id="messageDiv"></div>
+
+        <div class="audioplayer">
+            <audio id="audioPlayer" controls></audio>
+        </div>
+    </div>
+
+
+</body>
+<script src="../scripts/blindtest.js"></script>
+
+</html>
