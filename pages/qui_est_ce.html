@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Qui est-ce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/qui_est_ce.css">
+</head>
+<header>
+    <img class="logo" href="../index.html" src="../assets/header/soundle.PNG">
+    <a class="logoText" href="../index.html">Soundle</a>
+</header>
+
+<body>
+    <script src="../scripts/qui_est_ce.js"></script>
+    <div class="container">
+        <div id="emoji-container">
+            <div class="emoji-container">
+                <p id="emoji0" class="emoji"></p>
+            </div>
+            <div class="emoji-container">
+                <p id="emoji1" class="emoji">❔</p>
+            </div>
+            <div class="emoji-container">
+                <p id="emoji2" class="emoji">❔</p>
+            </div>
+            <div class="emoji-container">
+                <p id="emoji3" class="emoji">❔</p>
+            </div>
+        </div>
+        <div id="second-title">
+            <p>Qui suis-je ?</p>
+        </div>
+
+        <div class="form__group field">
+            <input class="form__field" id="answerInput" type="input" placeholder="Réponse" onkeydown="checkEnter(event)"
+                id="quisuisje" required autocomplete="off">
+            <label for="music" class="form__label">Réponse</label>
+        </div>
+    </div>
+</body>
+
+</html>
