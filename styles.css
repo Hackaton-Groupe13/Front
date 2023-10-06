@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #c977fc, #ffffff);
+  background: linear-gradient(to bottom, #000000, #c1c1c1);
   font-family: "Dela Gothic One", sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 .title {
-  background: linear-gradient(to bottom, #ffffff, #c977fc);
+  background: linear-gradient(to bottom, #ffffff, #d4d4d4);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -136,27 +136,27 @@ body {
 }
 
 .jeu4 {
-  background-color: #a6c2ff;
+  background-color: #232323;
 }
 .jeu3 {
-  background-color: #deb0ff;
+  background-color: #232323;
 }
 .jeu2 {
-  background-color: #b49bff;
+  background-color: #232323;
 }
 .jeu1 {
-  background-color: #a6c2ff;
+  background-color: #232323;
 }
 
 a {
   z-index: 1;
-  color: #000;
+  color: #ffffff;
   position: relative;
   text-decoration: none;
 }
 
 a::before {
-  background: #c977fc;
+  background: #6c6c6c;
   content: "";
   inset: 0;
   position: absolute;
@@ -169,6 +169,7 @@ a::before {
 a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+  color: #000;
 }
 .jeu1:hover,
 .jeu2:hover,
@@ -176,4 +177,5 @@ a:hover::before {
 .jeu4:hover {
   opacity: 0.5; /* Réduire l'opacité à 50% au survol */
   transition: opacity 0.3s ease-in-out; /* Ajouter une transition en douceur */
+  color: #000;
 }
