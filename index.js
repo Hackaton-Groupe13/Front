@@ -1,13 +1,7 @@
-function toggleMenu() {
-    var menu = document.querySelector(".menu");
-    menu.style.display = (menu.style.display === "block") ? "none" : "block";
-}
-
 var imgToGuess = "";
 var correctAnswer = "";
 var img = document.getElementById("cover");
-var p = document.getElementById("failWinText");
-var input = document.getElementById('answerInput');
+var input = document.getElementById('name');
 
 window.onload = function() {
     fetch("http://149.202.40.232:8080/api/info")
@@ -37,19 +31,23 @@ function getAnswer() {
 function checkAnswer(answer) {
     if (answer.toLowerCase() == correctAnswer.toLowerCase()) {
         win()
-    } else {
-        tryAgain()
     }
+    // } else {
+    //     tryAgain()
+    // }
 }
 
 function win() {
-    input.classList.add("hidden");
-    p.classList.remove("red");
-    p.classList.add("green");
-    p.innerHTML = "Gagné"
+    console.log("uwu")
+    input.classList.add("hidden")
+    var uwu = document.getElementById("uwu")
+    uwu.classList.add("hidden")
+    // p.classList.remove("red");
+    // p.classList.add("green");
+    // p.innerHTML = "Gagné"
 }
 
-function tryAgain() {
-    p.classList.add("red");
-    p.innerHTML = "Mauvaise réponse, essaye encore"
-}
+// function tryAgain() {
+//     p.classList.add("red");
+//     p.innerHTML = "Mauvaise réponse, essaye encore"
+// }
