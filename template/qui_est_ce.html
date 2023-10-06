@@ -1,16 +1,20 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Qui est-ce</title>
-        <!-- <link rel="icon" href="/static/img/logo.png"> -->
-        <link rel="stylesheet" href="../style/qui_est_ce.css">
-    </head>
-    <body>
-        <script src="../js/qui_est_ce.js"></script>
-        <div id="title">
-            <p>Qui suis-je ?</p>
-        </div>
+
+<head>
+    <meta charset="utf-8">
+    <title>Qui est-ce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/qui_est_ce.css">
+</head>
+<header>
+    <img class="logo" href="/" src="../soundle.PNG">
+    <a class="logoText">Soundle</a>
+</header>
+
+<body>
+    <script src="../js/qui_est_ce.js"></script>
+    <div class="container">
         <div id="emoji-container">
             <div class="emoji-container">
                 <p id="emoji0" class="emoji"></p>
@@ -28,6 +32,13 @@
         <div id="second-title">
             <p>Qui suis-je ?</p>
         </div>
-        <input id="answerInput" type="text" placeholder="Votre réponse ici" onkeydown="checkEnter(event)">
-    </body>
+
+        <div class="form__group field">
+            <input class="form__field" id="answerInput" type="input" placeholder="Réponse" onkeydown="checkEnter(event)"
+                id="quisuisje" required autocomplete="off">
+            <label for="music" class="form__label">Réponse</label>
+        </div>
+    </div>
+</body>
+
 </html>
